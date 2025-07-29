@@ -13,6 +13,7 @@
     "@meshsdk/core": "^1.9.0-beta.64",
     "@meshsdk/core-cst": "^1.9.0-beta.64",
     "@meshsdk/provider": "^1.9.0-beta.64",
+    "@meshsdk/react": "^1.9.0-beta.66",
     "@meshsdk/web3-sdk": "^0.0.48",
     "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-slot": "^1.2.3",

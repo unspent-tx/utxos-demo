@@ -40,6 +40,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useWallet } from "@meshsdk/react";
+import Link from "next/link";
 interface BlockfrostUtxo {
   output_index: number;
   tx_hash: string;
@@ -61,7 +63,7 @@ export default function Home() {
   const [walletInfo, setWalletInfo] = useState<any>(null);
   const [network, setNetwork] = useState("preprod");
   const [projectId, setProjectId] = useState(
-    "08555581-f3ad-401d-8ca2-d678687b4574"
+    process.env.NEXT_PUBLIC_UTXOS_PROJECT_ID
   );
   const [chain, setChain] = useState("cardano");
   const [directTo, setDirectTo] = useState<Web3AuthProvider | null>(null);
@@ -380,6 +382,9 @@ export default function Home() {
                   variant="outline"
                 >
                   Test Transaction
+                </Button>
+                <Button variant="outline">
+                  <Link href="/react">Test React Wallet</Link>
                 </Button>
               </div>
             </CardContent>
